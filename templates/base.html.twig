@@ -3,9 +3,9 @@
     <head>
         <title>{% block title %}{# Welcome #}{% endblock %} | {{ meta('Title') }}</title>
         <meta name="title" content="{{ block('title') }} | {{ meta('Meta : Title') }}">
-        {# {% block stylesheets %}
+        {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        {% endblock %} #}
+        {% endblock %}
         {% include "_includes/_head.html.twig" %}
     </head>
     <body>
@@ -21,9 +21,9 @@
             
             {% block javascripts %}
                 {# encore_entry_script_tags('app') #}
-                {# {% for file in encore_entry_js_files('app') %}
+                {% for file in encore_entry_js_files('app') %}
                     <script src="{{ asset(file) }}" async></script>
-                {% endfor %} #}
+                {% endfor %}
             {% endblock %}
         </footer>
     </body>
