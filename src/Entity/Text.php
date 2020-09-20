@@ -32,7 +32,6 @@ class Text
     private $type;
 
     const TYPE_HTML = 'html';
-    const TYPE_TEXT = 'text';
     const TYPE_META = 'meta';
 
     public function __construct($name = null, $content = null, $type = self::TYPE_HTML)
@@ -40,6 +39,11 @@ class Text
         $this->name = $name;
         $this->content = $content;
         $this->type = $type;
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 
     public function getId(): ?int

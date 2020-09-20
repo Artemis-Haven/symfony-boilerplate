@@ -29,15 +29,9 @@ class TextProviderExtension extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new TwigFunction('text', [$this, 'getText']),
             new TwigFunction('page', [$this, 'getPage'], ['is_safe' => ['html']]),
             new TwigFunction('meta', [$this, 'getMeta']),
         ];
-    }
-
-    public function getText(string $name): string
-    {
-        return $this->getData($name, Text::TYPE_TEXT);
     }
 
     public function getPage(string $name): string

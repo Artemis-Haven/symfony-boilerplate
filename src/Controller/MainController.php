@@ -18,7 +18,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/", name="page_one")
+     * @Route("/page-one", name="page_one")
      */
     public function pageOne()
     {
@@ -28,7 +28,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/", name="page_tow")
+     * @Route("/page-two", name="page_tow")
      */
     public function pageTwo()
     {

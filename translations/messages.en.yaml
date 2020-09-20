@@ -1,0 +1,12 @@
+admin:
+  metadata:
+    short: Structure
+    full: Structuring texts of the site (Title, metadata, etc)
+    edit: "Edit the text"
+  pages:
+    short: Pages
+    full: Content of text blocks in pages
+    edit: "Edit the text"
+  name: Name
+  content: Content
+  website_content: "Website content"

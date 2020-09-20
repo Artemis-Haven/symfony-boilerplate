@@ -1,0 +1,12 @@
+admin:
+  metadata:
+    short: Structure
+    full: Textes structurants du site (Titre, Méta-données, etc)
+    edit: "Editer le texte"
+  pages:
+    short: Pages
+    full: Contenu des blocs de texte dans les pages
+    edit: "Editer le texte"
+  name: Nom
+  content: Contenu
+  website_content: "Contenu du site"
