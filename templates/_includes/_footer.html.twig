@@ -1,0 +1,27 @@
+<a href="https://www.gazette-du-sorcier.com">
+    <img src="{{ asset('images/Gazette_du_Sorcier_Logo_blanc-80x80.png') }}" srcset="{{ asset('images/Gazette_du_Sorcier_Logo_blanc-160x160.png') }} 2x, {{ asset('images/Gazette_du_Sorcier_Logo_blanc-240x240.png') }} 3x" alt="Logo">
+    <h1>{{ meta('Title - Short') }}</h1>
+</a>
+
+<p class="container">
+    <small>{{ text('Footer') }}</small>
+</p>
+
+<ul id="menu-footer" class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" href="#">Lien footer 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Lien footer 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Lien footer 3</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Lien footer 4</a>
+    </li>
+</ul>
+
+<p id="copyright">
+    Copyright &copy; 2000-{{'now'|date('Y')}} {{ meta('Copyright') }}
+</p>

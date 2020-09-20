@@ -1,0 +1,58 @@
+easy_admin:
+    site_name: 'Administration'
+    formats:
+        date:     'd/m/Y'
+        time:     'H\hi'
+        datetime: 'd/m/Y \à H\hi'
+
+    design:
+        menu:
+            - { label: 'Contenu du site' }
+            - { entity: 'Page', icon: 'file-alt', label: 'Pages' }
+            - { entity: 'Text', icon: 'align-left', label: 'Textes' }
+            - { entity: 'Meta', icon: 'info', label: 'Méta-données' }
+
+    entities:
+
+        Page:
+            class: App\Entity\Text
+            label: 'Page'
+            list:
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'content', label: 'Contenu' }
+                dql_filter: "entity.type = 'html'"
+            form:
+                fields:
+                    - { type: 'group' }
+                    - { property: 'name', label: 'Nom', type_options: { disabled: true } }
+                    - { property: 'content', label: 'Contenu', type: 'fos_ckeditor', type_options: { config_name: 'config_with_uploadable_images', 'attr': {'size': 20}} }
+            disabled_actions: ['new', 'delete']
+
+        Text:
+            class: App\Entity\Text
+            label: 'Texte'
+            list:
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'content', label: 'Contenu' }
+                dql_filter: "entity.type = 'text'"
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom', type_options: { disabled: true } }
+                    - { property: 'content', label: 'Contenu' }
+            disabled_actions: ['new', 'delete']
+
+        Meta:
+            class: App\Entity\Text
+            label: 'Méta-données'
+            list:
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'content', label: 'Contenu' }
+                dql_filter: "entity.type = 'meta'"
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom', type_options: { disabled: true } }
+                    - { property: 'content', label: 'Contenu' }
+            disabled_actions: ['new', 'delete']

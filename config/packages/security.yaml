@@ -1,24 +1,29 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\Admin:
+            algorithm: auto
+
     providers:
-        users_in_memory: { memory: null }
+        admin_provider:
+            entity:
+                class: App\Entity\Admin
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
-            anonymous: true
-            lazy: true
-            provider: users_in_memory
+        admin:
+            pattern: ^/admin
+            provider: admin_provider
+            custom_authenticators:
+                - App\Security\AdminAuthenticator
+            remember_me:
+                secret:   '%kernel.secret%'
+            entry_point: App\Security\AdminAuthenticator
 
-            # activate different ways to authenticate
-            # https://symfony.com/doc/current/security.html#firewalls-authentication
-
-            # https://symfony.com/doc/current/security/impersonating_user.html
-            # switch_user: true
-
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin/login$, role: PUBLIC_ACCESS  }
+        - { path: ^/admin, role: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+
+    enable_authenticator_manager: true

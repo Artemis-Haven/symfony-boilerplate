@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}{# Welcome #}{% endblock %} | {{ meta('Title') }}</title>
+        <meta name="title" content="{{ block('title') }} | {{ meta('Meta : Title') }}">
+        {# {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %} #}
+        {% include "_includes/_head.html.twig" %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% include "_includes/_header.html.twig" %}
+
+        <section id="page-content" class="container-xl">
+            {% block body %}{% endblock %}
+        </section>
+
+        <footer>
+            {% include "_includes/_footer.html.twig" %}
+            
+            {% block javascripts %}
+                {# encore_entry_script_tags('app') #}
+                {# {% for file in encore_entry_js_files('app') %}
+                    <script src="{{ asset(file) }}" async></script>
+                {% endfor %} #}
+            {% endblock %}
+        </footer>
     </body>
 </html>
