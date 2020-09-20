@@ -1,0 +1,30 @@
+/* Define variables */
+
+// Examples :
+
+// $link-hover-decoration: none;
+// $enable-rounded: false;
+// $primary: #ffffff;
+// $secondary: #6c757d;
+// $input-border-color: #ffffff;
+// $input-bg: rgba(255, 255, 255, 0.95);
+// $input-disabled-bg: rgba(255, 255, 255, 0.20);
+// $modal-content-color: #333;
+
+/******************/
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/******************/
+
+/* Override styles */
+
+// Examples
+
+// h4, .h4 {
+//     font-size: 20px;
+//     font-size: 1.5rem;
+// }
+// .navbar {
+//     color: $body-color;
+// }
