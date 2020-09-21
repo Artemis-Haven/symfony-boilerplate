@@ -1,0 +1,12 @@
+fos_ck_editor:
+    input_sync: true
+    configs:
+        config_with_uploadable_images:
+            filebrowserBrowseRoute: elfinder
+            filebrowserBrowseRouteParameters: []
+            toolbar: full
+            height: 500px
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
