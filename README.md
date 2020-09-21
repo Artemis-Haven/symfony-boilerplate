@@ -4,7 +4,7 @@ This is a Symfony boilerplate to quickly start a Symfony project. It includes:
 
 **It is intended to be used in association with this other repository :** https://github.com/Artemis-Haven/symfony-docker-boilerplate but it can also be used independently.
 
-With these two repos, **in less than one minute, you can deploy a fully working, ready-to-use, dev environment for a new Symfony project.**
+With these two repos, **in less than one minute, you can deploy a fully working, ready-to-use, dev environment for a new Symfony project** (the see instructions below).
 
 The other repository contains containers for:
 - PHP-FPM with Composer & Symfony executables
@@ -42,7 +42,7 @@ Some useful custom features:
 
 Example: The template of the homepage
 
-![The template for the homepage][https://i.imgur.com/Xhd0Nfe.png]
+![The template for the homepage](https://i.imgur.com/Xhd0Nfe.png)
 
 ---
 
