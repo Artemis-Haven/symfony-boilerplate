@@ -10,3 +10,13 @@ admin:
   name: Nom
   content: Contenu
   website_content: "Contenu du site"
+
+login:
+  administration: Administration
+  loggedAs: Vous êtes connecté en tant que
+  username: Nom d'utilisateur
+  password: Mot de passe
+  rememberMe: Se souvenir de moi
+  login: Connexion
+  logout: Déconnexion
+  

@@ -36,6 +36,11 @@ public function __toString() { return "Admin"; }
      */
     private $password;
 
+    public function __toString()
+    {
+        return "Admin";
+    }
+
     public function getId(): ?int
     {
         return $this->id;

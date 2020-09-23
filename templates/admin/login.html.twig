@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h3>Administration</h3>
+<h3>{{ 'login.administration'|trans }}</h3>
 
 <form method="post">
     {% if error %}
@@ -11,24 +11,24 @@
 
     {% if app.user %}
         <div class="mb-3">
-            Vous êtes connecté en tant que {{ app.user.username }}, <a class="btn" href="{{ path('app_logout') }}">Déconnexion</a>
+            {{ 'login.loggedAs'|trans }} {{ app.user.username }}, <a class="btn" href="{{ path('app_logout') }}">{{ 'login.logout'|trans }}</a>
         </div>
     {% endif %}
 
-    <label for="inputUsername">Nom d'utilisateur</label>
+    <label for="inputUsername">{{ 'login.username'|trans }}</label>
     <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus>
-    <label for="inputPassword">Mot de passe</label>
+    <label for="inputPassword">{{ 'login.password'|trans }}</label>
     <input type="password" name="password" id="inputPassword" class="form-control" required>
 
     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate_admin') }}">
 
     <div class="checkbox my-3">
         <label>
-            <input type="checkbox" name="_remember_me"> Se souvenir de moi
+            <input type="checkbox" name="_remember_me"> {{ 'login.rememberMe'|trans }}
         </label>
     </div>
 
-    <button class="btn btn-lg btn-primary" type="submit">Connexion</button>
+    <button class="btn btn-lg btn-primary" type="submit">{{ 'login.login'|trans }}</button>
 </form>
 
 {% endblock %}

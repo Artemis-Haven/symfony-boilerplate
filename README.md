@@ -40,9 +40,25 @@ Some useful custom features:
   - `page()` is for the formated text zones. You can edit it with a WYSIWYG editor
   - `meta()` is for the metadata and the structural elements (title, description, copyright, etc)
 
-Example: The template of the homepage
+**Example:** The template of the homepage
 
 ![The template for the homepage](https://i.imgur.com/Xhd0Nfe.png)
+
+---
+
+## Screenshots
+
+The WYSIWYG editor (CkEditor) with a file explorer (ElFinder) to manage medias
+![CkEditor, the WYSIWYG editor](https://i.imgur.com/iiz1Ss0.png)
+
+ElFinder, the file explorer
+![ElFinder, the file explorer](https://i.imgur.com/qdcYVF1.png)
+
+A page filled using the editor
+![A page filled using the editor](https://i.imgur.com/XDrFplR.png)
+
+The login page for the admin zone
+![The login page for the admin zone](https://i.imgur.com/yiVk7fT.png)
 
 ---
 
