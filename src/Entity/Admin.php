@@ -18,8 +18,6 @@ class Admin implements UserInterface
      */
     private $id;
 
-public function __toString() { return "Admin"; }
-
     /**
      * @ORM\Column(type="string", length=255)
      */
